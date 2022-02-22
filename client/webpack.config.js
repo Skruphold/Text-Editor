@@ -24,6 +24,10 @@ module.exports = () => {
         title: 'Just Another Text Editor'
       }),
       new MiniCssExtractPlugin(),
+      new InjectManifest({
+        swSrc: './src-sw.js',
+        swDest: 'src-sw.js',
+      }),
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
